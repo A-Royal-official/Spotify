@@ -2,6 +2,12 @@
 
 A modern music streaming application built with React and Node.js, featuring YouTube music downloads and a beautiful Spotify-inspired interface.
 
+## 🌐 Live Demo
+
+**Frontend**: [https://a-royal-official.github.io/Spotify/](https://a-royal-official.github.io/Spotify/)
+
+*Note: The live demo shows the UI. For full functionality (music downloads), you'll need to run the backend locally.*
+
 ## ✨ Features
 
 - **🎵 Music Library**: Download and manage your music collection
