@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify Clone</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-900 text-white font-sans">
+
+    <!-- Root container for React -->
+    <div id="root">
+      <!-- Optional placeholder content while React loads -->
+      <div class="flex min-h-screen">
+        <!-- Sidebar placeholder -->
+        <aside class="w-64 bg-gradient-to-b from-black via-gray-900 to-gray-800 p-6 flex flex-col text-gray-300">
+          <h1 class="text-3xl font-bold text-white mb-8">My Music</h1>
+          <ul class="space-y-4">
+            <li class="hover:text-white cursor-pointer transition font-semibold">Home</li>
+            <li class="hover:text-white cursor-pointer transition font-semibold">Search</li>
+            <li class="hover:text-white cursor-pointer transition font-semibold">Your Library</li>
+            <li class="hover:text-white cursor-pointer transition font-semibold">Create Playlist</li>
+            <li class="hover:text-white cursor-pointer transition font-semibold">Liked Songs</li>
+          </ul>
+        </aside>
+
+        <!-- Main content placeholder -->
+        <main class="flex-1 flex flex-col bg-gray-900 p-6">
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+            <div class="bg-gray-800 rounded-lg hover:scale-105 transform transition duration-200 cursor-pointer h-48 flex items-center justify-center text-white font-bold">Song 1</div>
+            <div class="bg-gray-800 rounded-lg hover:scale-105 transform transition duration-200 cursor-pointer h-48 flex items-center justify-center text-white font-bold">Song 2</div>
+            <div class="bg-gray-800 rounded-lg hover:scale-105 transform transition duration-200 cursor-pointer h-48 flex items-center justify-center text-white font-bold">Song 3</div>
+          </div>
+        </main>
+      </div>
+
+      <!-- Bottom player placeholder -->
+      <footer class="fixed bottom-0 left-0 right-0 bg-gray-800 border-t border-gray-700 p-4 flex items-center justify-between">
+        <div class="flex items-center space-x-4">
+          <div class="w-16 h-16 bg-green-700 flex items-center justify-center text-white font-bold text-lg rounded">AB</div>
+          <div>
+            <div class="text-white font-semibold">Song Title</div>
+            <div class="text-gray-400 text-sm">Artist</div>
+          </div>
+        </div>
+        <div class="flex-1 mx-6">
+          <audio controls class="w-full">
+            <source src="" type="audio/mp3" />
+          </audio>
+        </div>
+      </footer>
+    </div>
+
+    <!-- React entry -->
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
