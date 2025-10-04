@@ -7,9 +7,20 @@ export default function Library({ refresh }) {
   const { setQueueAndPlay } = usePlayer();
 
   useEffect(() => {
+    // Try to fetch from backend, fallback to demo data
     axios.get("http://localhost:5000/songs")
       .then((res) => setSongs(res.data))
-      .catch((err) => console.error(err));
+      .catch((err) => {
+        console.log("Backend not available, using demo data");
+        // Demo data for when backend isn't available (like on GitHub Pages)
+        setSongs([
+          "Flawlëss (feat. Lil Uzi Vert) [Official Audio]",
+          "Travis Scott - goosebumps ft. Kendrick Lamar",
+          "Ken Carson - ss (Official Audio)",
+          "Rich Amiri - One Call (Official Audio)",
+          "Travis Scott - FE!N (Official Audio) ft. Playboi Carti"
+        ]);
+      });
   }, [refresh]); // 👈 re-fetch when refresh changes
 
   return (
@@ -31,7 +42,14 @@ export default function Library({ refresh }) {
               <li
                 key={idx}
                 className="bg-zinc-800 p-4 rounded-lg hover:bg-zinc-700 cursor-pointer"
-                onClick={() => setQueueAndPlay(tracks, idx)}
+                onClick={() => {
+                  // Show demo message for GitHub Pages
+                  if (window.location.hostname.includes('github.io')) {
+                    alert('🎵 Demo Mode: This is a preview of the Spotify clone! For full functionality, run the backend locally.');
+                    return;
+                  }
+                  setQueueAndPlay(tracks, idx);
+                }}
                 title="Play"
               >
                 <h4 className="font-semibold">{title}</h4>
