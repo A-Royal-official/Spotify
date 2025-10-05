@@ -145,3 +145,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 **Note**: This project is for educational purposes only. Please respect copyright laws and YouTube's terms of service when downloading content.
+# Spotify

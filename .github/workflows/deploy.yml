@@ -1,9 +1,5 @@
 # GitHub Pages deployment workflow - DISABLED
-# The React app files are now in the root directory and served directly from main branch
-
-# name: Deploy to GitHub Pages
-# 
-# on:
+#   The React app files are now in the root directory and served directly from main branch
 #   push:
 #     branches: [ main ]
 # 
