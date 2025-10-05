@@ -8,6 +8,12 @@ export default function YoutubeDownloader({ onDownloadComplete }) {
   const handleDownload = async () => {
     if (!url) return;
 
+    // Show demo message for GitHub Pages
+    if (window.location.hostname.includes('github.io')) {
+      setStatus("🎵 Demo Mode: Download feature requires backend server. Run locally for full functionality!");
+      return;
+    }
+
     setStatus("Downloading...");
     try {
       const res = await axios.post("http://localhost:5000/download", { url });
